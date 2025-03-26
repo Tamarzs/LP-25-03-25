@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+body {
+         font-family: "Quicksand", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+    }
+    code, pre, src, source {
+        font-family: "Source Code Pro", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+    }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org2dc4916">1. repetição com for</a>
+<ul>
+<li><a href="#orgd28d157">1.1. Exercício</a></li>
+</ul>
+</li>
+<li><a href="#org071bfe2">2. Switch</a>
+<ul>
+<li><a href="#org9959d9f">2.1. Exercício</a></li>
+<li><a href="#org7bcd0d9">2.2. Caso padrão</a></li>
+<li><a href="#orgad41eb0">2.3. Ignorar linha em branco</a></li>
+<li><a href="#org706cf64">2.4. Exercício</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2dc4916" class="outline-2">
+<h2 id="org2dc4916"><span class="section-number-2">1.</span> repetição com for</h2>
+<div class="outline-text-2" id="text-1">
+<div class="org-src-container">
+<pre class="src src-c">
+/* inicialização */
+int contador = 1;
+int fim = 5;
+
+/* condição */
+while( contador &lt;= fim ) {
+  printf("%d ", contador);
+
+  /* atualização */
+  contador = contador + 1;
+}
+</pre>
+</div>
+
+<p>
+No comando <code>for</code> todos os itens da repetição (inicialização, condição e atualização) são definidos de uma vez:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c">int fim = 5;
+
+for(int contador = 1; contador &lt;= fim; contador++) {
+  printf("%d ", contador);
+}
+</pre>
+</div>
+
+<svg width="400" height="500" xmlns="http://www.w3.org/2000/svg" style="background-color: #f0f0f0;">
+  <!-- Título -->
+  <text x="20" y="30" font-family="monospace" font-size="14" fill="black">for</text>
+
+  <!-- Círculo de início -->
+  <circle cx="200" cy="70" r="10" fill="#cce5ff" stroke="#000" stroke-width="1" />
+    <!-- Seta para o primeiro bloco -->
+  <line x1="200" y1="80" x2="200" y2="100" stroke="#000" stroke-width="2" />
+
+  <!-- Seta para o primeiro bloco -->
+  <line x1="200" y1="80" x2="200" y2="100" stroke="#000" stroke-width="2" />
+
+
+  <!-- Bloco de inicialização do contador -->
+  <rect x="145" y="100" width="110" height="40" rx="5" ry="5" fill="#cce5ff" stroke="#000" stroke-width="1" />
+  <text x="155" y="125" font-family="monospace" font-size="12" fill="black">contador = 1;</text>
+
+  <!-- Seta para o bloco condicional -->
+  <line x1="200" y1="140" x2="200" y2="180" stroke="#000" stroke-width="2" />
+
+  <!-- Bloco condicional (while) em formato de diamante -->
+  <path d="M 140 200 L 200 170 L 260 200 L 200 230 Z" fill="yellow" stroke="#000" stroke-width="1" />
+  <text x="255" y="190" font-family="monospace" font-size="12" fill="black">true</text>
+  <text x="110" y="190" font-family="monospace" font-size="12" fill="black">false</text>
+  <text x="200" y="205" font-family="monospace" font-size="12" fill="black" text-anchor="middle">contador <= 5</text>
+
+  <!-- Bloco de impressão -->
+  <rect x="170" y="250" width="190" height="40" rx="5" ry="5" fill="#d4edda" stroke="#000" stroke-width="1" />
+  <text x="180" y="275" font-family="monospace" font-size="12" fill="black">printf("%d ", contador);</text>
+
+  <!-- Seta para o bloco de incremento -->
+  <line x1="260" y1="200" x2="260" y2="250" stroke="#000" stroke-width="2" />
+
+  <!-- Bloco de incremento do contador -->
+  <rect x="170" y="320" width="190" height="40" rx="5" ry="5" fill="#cce5ff" stroke="#000" stroke-width="1" />
+  <text x="180" y="345" font-family="monospace" font-size="12" fill="black">contador = contador + 1;</text>
+
+  <line x1="260" y1="290" x2="260" y2="320" stroke="#000" stroke-width="2" />
+
+  <line x1="260" y1="360" x2="260" y2="380" stroke="#000" stroke-width="2" />
+    <line x1="260" y1="380" x2="380" y2="380" stroke="#000" stroke-width="2" />
+    <line x1="380" y1="380" x2="380" y2="155" stroke="#000" stroke-width="2" />
+    <line x1="380" y1="155" x2="200" y2="155" stroke="#000" stroke-width="2" />            
+
+  <!-- Seta para o bloco de fim (false) -->
+  <line x1="140" y1="200" x2="100" y2="200" stroke="#000" stroke-width="2" />
+  <line x1="100" y1="200" x2="100" y2="400" stroke="#000" stroke-width="2" />
+  <line x1="100" y1="400" x2="200" y2="400" stroke="#000" stroke-width="2" />
+  <line x1="200" y1="400" x2="200" y2="420" stroke="#000" stroke-width="2" />
+
+
+  <!-- Bloco de retorno -->
+  <rect x="150" y="420" width="100" height="40" rx="5" ry="5" fill="#cce5ff" stroke="#000" stroke-width="1" />
+  <text x="160" y="445" font-family="monospace" font-size="12" fill="black">return 0;</text>
+
+  <line x1="200" y1="460" x2="200" y2="480" stroke="#000" stroke-width="2" />  
+
+  <!-- Círculo de fim -->
+  <circle cx="200" cy="480" r="10" fill="#cce5ff" stroke="#000" stroke-width="1" />
+</svg>
+
+<p>
+O resultado é o mesmo!
+</p>
+</div>
+
+<div id="outline-container-orgd28d157" class="outline-3">
+<h3 id="orgd28d157"><span class="section-number-3">1.1.</span> Exercício</h3>
+<div class="outline-text-3" id="text-1-1">
+<ol class="org-ol">
+<li value="1">Crie um programa em C que recebe um número e, usando for, soma todos os impares de 1 até o número recebido.</li>
+</ol>
+</div>
+</div>
+</div>
+
+</body>
+</html>
