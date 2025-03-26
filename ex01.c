@@ -1,17 +1,18 @@
 #include "stdio.h"
 
 int main() {
-    int num, soma;
+    int num, soma = 0;
     
     printf("Digite um número: ");
     scanf("%d", &num);
     
-    int fim = num;
-
-for(int num = 1; num <= fim; num++) {
-    if (num % 2 != 0) {
-        num += soma;
-        printf("%d ", soma);
+    for (int i = 1; i <= num; i++) {  
+        if (i % 2 != 0) {  
+            soma += i;  
+            printf("%d ", i);  
+        }
     }
-}
+    
+    printf("\nSoma dos números ímpares: %d\n", soma);
+    return 0;
 }
